@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PermsFree Feedback Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header, footer {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      background-color: #ffe3e0;
+      color: #a0525c;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 25px;
+      margin: 30px 0;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #a0525c;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #444;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+      margin-top: -12px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #f472b6;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ec4899;
+    }
+  </style>
+</head>
+<body>
+  <header>
+
+  </header>
+
+  <div class="form-container">
+    <h2>Feedback Form</h2>
+    <form id="feedbackForm" onsubmit="return validateForm()">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your full name">
+      <div id="nameError" class="error"></div>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="your@example.com">
+      <div id="emailError" class="error"></div>
+
+      <label for="comments">Your Comments:</label>
+      <textarea id="comments" name="comments" placeholder="Share your experience or suggestions..."></textarea>
+      <div id="commentsError" class="error"></div>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+
+  <!-- Nafasi kwa footer -->
+  <footer>
+    
+  </footer>
+
+  <script>
+    function validateForm() {
+      // Get form values
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const comments = document.getElementById("comments").value.trim();
+
+      // Error elements
+      const nameError = document.getElementById("nameError");
+      const emailError = document.getElementById("emailError");
+      const commentsError = document.getElementById("commentsError");
+
+      // Reset errors
+      nameError.textContent = "";
+      emailError.textContent = "";
+      commentsError.textContent = "";
+
+      let valid = true;
+
+      // Validate name
+      if (name === "") {
+        nameError.textContent = "Please enter your full name.";
+        valid = false;
+      }
+
+      // Validate email
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (email === "") {
+        emailError.textContent = "Email address is required.";
+        valid = false;
+      } else if (!emailPattern.test(email)) {
+        emailError.textContent = "Please enter a valid email.";
+        valid = false;
+      }
+
+      // Validate comments
+      if (comments.length < 10) {
+        commentsError.textContent = "Comments should be at least 10 characters.";
+        valid = false;
+      }
+
+      return valid;
+    }
+  </script>
+</body>
+</html>

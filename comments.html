@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comments</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe4e1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    footer, header {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      background-color: #ffe6f0; 
+      color: #333;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #f3c4d1;
+    }
+
+    header nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #c71585;
+      font-weight: bold;
+    }
+
+    header nav a:hover {
+      color: #ff69b4;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #fce4ec;
+      color:  #c71585;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+      height: 200px;
+      min-height: 50px;
+      border-top: 2px solid #f3c4d1;
+    }
+
+    .comment-box {
+      background-color: #e5cfdd;
+      margin: 40px 20px;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #a52a5a;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: 2px solid #ff026c;
+      border-radius: 12px;
+      font-size: 1em;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #ff69b4;
+      outline: none;
+      background-color: #fb5a9d;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+      margin-top: -15px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background: white;
+      color: #ff69b4;
+      border: none;
+      padding: 12px 20px;
+      width: 100%;
+      font-size: 1em;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #e75480;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>One nails</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="About Us.html">About Us</a>
+      <a href="services.html">Our Services</a>
+      <a href="add.html">Contact us</a>
+      <a href="comments.html">Comments section</a>
+    </nav>
+  </header>
+
+  <div class="comment-box">
+    <h2>Comments on our service</h2>
+    <form  action="https://formspree.io/f/xnnzjqrl"   method="post"     id="commentForm" onsubmit="return validateComment()">
+      <label for="username">Your Name</label>
+      <input type="text" id="username" name="username" placeholder=" malaika" />
+      <div id="nameError" class="error"></div>
+
+      <label for="useremail">Your Email</label>
+      <input type="email" id="useremail" name="useremail" placeholder="e.g. Onenails@example.com" />
+      <div id="emailError" class="error"></div>
+
+      <label for="usercomment">Your Comment</label>
+      <textarea id="usercomment" name="usercomment" placeholder="Write your comments here..."></textarea>
+      <div id="commentError" class="error"></div>
+
+      <button type="submit">Submit your comments</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 One nails. All rights reserved.</p>
+    <p><strong>One nail at your service</strong></p>
+    <p>
+      <strong>
+        CONTACT<br>
+        Chat on WhatsApp: +255719537771 <br>
+        Call us: +255750737707 / +255761370771 <br>
+        MADALE CONTENA JESUS JUNCTION
+      </strong>
+    </p>
+  </footer>
+
+  <script>
+    function validateComment() {
+      const name = document.getElementById("username").value.trim();
+      const email = document.getElementById("useremail").value.trim();
+      const comment = document.getElementById("usercomment").value.trim();
+
+      const nameError = document.getElementById("nameError");
+      const emailError = document.getElementById("emailError");
+      const commentError = document.getElementById("commentError");
+
+      nameError.textContent = "";
+      emailError.textContent = "";
+      commentError.textContent = "";
+
+      let isValid = true;
+
+      if (name === "") {
+        nameError.textContent = "Please enter your name.";
+        isValid = false;
+      }
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+      if (email === "") {
+        emailError.textContent = "Email is required.";
+        isValid = false;
+      } else if (!emailPattern.test(email)) {
+        emailError.textContent = "Please enter a valid email address.";
+        isValid = false;
+      }
+
+      if (comment.length < 5) {
+        commentError.textContent = "Comment must be at least 5 characters.";
+        isValid = false;
+      }
+
+      return isValid;
+    }
+  </script>
+</body>
+</html>
