@@ -1,125 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>about us</title>
     <style>
-
-    body {
-    font-family: Arial, sans-serif;
-    background-image: url(4.jpg);
-      padding: 10px;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-       }
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url(4.jpg);
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
       footer header {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
 
+      header {
+        background-color: #ffe6f0;
+        color: #333;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 2px solid #f3c4d1;
+      }
 
-     header {
-  background-color: #ffe6f0; 
-  color: #333;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #f3c4d1;
-}
+      header h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
 
-header h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
+      header nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #c71585;
+        font-weight: bold;
+      }
 
-header nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #c71585;
-  font-weight: bold;
-}
+      header nav a:hover {
+        color: #ff69b4;
+      }
 
-header nav a:hover {
-  color: #ff69b4;
-}
+      footer {
+        background-color: #fce4ec;
+        color: #c71585;
+        text-align: center;
+        padding: 15px 10px;
+        margin-top: 40px;
+        height: auto;
+        min-height: 50px;
+        border-top: 2px solid #f3c4d1;
+        box-sizing: 500px;
+      }
 
-         footer {
-  background-color: #fce4ec;
-  color:  #c71585;
-  text-align: center;
-  padding: 15px 10px;
-  margin-top: 40px;
-  height: 200px;
-  min-height: 50px;
-      border-top: 2px solid #f3c4d1;
-      box-sizing: 500px;
- }
+      footer .socials a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #c71585;
+      }
 
-         footer .socials a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #c71585;
-}
-
-             footer .socials a:hover {
-  color: #ff1493;
-}
-    .about-container {
-       max-width: 800px;
-     margin: auto;
+      footer .socials a:hover {
+        color: #ff1493;
+      }
+      .about-container {
+        max-width: 800px;
+        margin: auto;
       }
       h2 {
         color: grey;
       }
 
-          h1 {
-    color: #f6019c;
-      }     
-        #content {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          color: black;
-        }
+      h1 {
+        color: #f6019c;
+      }
+      #content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: black;
+      }
     </style>
-           </head>
-                <body>
-  <!-- HEADER -->
-  <header>
-    <h1>OneNail Saloon</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="About Us.html">About Us</a>
-      <a href="services.html">Our Services</a>
-       <a href="add.html">Contact us</a>
-       <a href="comments.html">Comments section</a>
-    </nav>
-  </header>
-     <div id="content">
-  <div>
-    <h1>contact us</h1>
-    <p>welcome your number one spot for top-quality manicure and pedicure services.</p>
-    <p> you can contacts or communicae via us lively at sports through the our contact information below</p>
-      <P style="color: #fe046c;">
-    <strong>
-   CONTACT<br>
-   Chat on WhatsApp: +255719537771 <br>
-   Call us: +255750737707 <br>
-             +255761370771 <br>
-   MADALE CONTENA JESUS JUNCTION
-   </strong>
-  </P>
-    <a href="mailto:Onenailscare@gmail.com" style="color:  rgb(255, 1, 13);">tap this link to email us</a>
-  </div>
-  </div>
-   <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Little one nails. All rights reserved.</p>
-  
-  <p><strong>little one nail at your service</strong></p>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <header>
+      <h1>OneNail Saloon</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="About Us.html">About Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="add.html">Sample work</a>
+        <a href="comments.html">Contact us</a>
+      </nav>
+    </header>
+    <div class="grid grid-cols-1 m-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="9.jpg" alt="Nail Art" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          Technicians
+        </h3>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="20.jpg" alt="Nail Art" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+            natural
+        </h3>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="10.jpg" alt="Nail Art" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          cool
+        </h3>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="24.jpg" alt="Nail Art" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          elegantly
+        </h3>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="22.jpg" alt="Nail Art" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          somehow
+        </h3>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="23.jpg" alt="Nail Art" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          amazingly
+        </h3>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="2.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          vibrantly
+        </h3>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="3.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          charmingly
+        </h3>
+    </div>
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="5.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          stylishly
+          </h3>
+            </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="6.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          gracefully
+        </h3>
+        </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="7.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          elegantly
+        </h3>
+    </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="8.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          stylishly
+        </h3>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="amina.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          shiningly
+        </h3>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="real.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          naturally
+        </h3>
+    </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="1.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          neaty
+        </h3>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="10.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          vibrantly
+        </h3>
+                      </div>  
+                         <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="11.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          charmingly
+                    </h3>
+                         </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="12.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          calm
+          </h3>
+    </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="13.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          uniquely
+        </h3>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="14.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          classy  
+        </h3>
+                        </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="15.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          classic
+        </h3>
+          </h3>
+             </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="16.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          cool
+        </h3>
+                </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="17.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          charmingly
+        </h3>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="19.jpg" alt="" class="w-full h-48 object-cover" />
+        <h3 class="text-center text-lg font-semibold text-gray-800 py-3">
+          uniquely
+        </h3>
+                      </div>
+                        </div>
+    <footer>
+
+
+<p><strong>One nail at your service</strong></p>
   <P>
     <strong>
    CONTACT<br>
@@ -129,6 +256,13 @@ header nav a:hover {
    MADALE CONTENA JESUS JUNCTION
    </strong>
   </P>
-</footer>
-</body>
+<p>&copy; 2023 OneNail Saloon. All rights reserved.</p>
+  <p>Follow us on social media for more updates!</p>
+  <div class="socials">
+    <a href="https://www.facebook.com/onenails">Facebook</a>
+    <a href="https://www.instagram.com/onenails">Instagram</a>
+    <a href="https://www.twitter.com/onenails">Twitter</a>
+  </div>
+      </footer>
+  </body>
 </html>
